@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+const styles = {
+  center: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '50%'
+  },
+}
 
 class ProjectItem extends Component {
   deleteProject(id){
@@ -7,7 +14,7 @@ class ProjectItem extends Component {
 
   render() {
     return (
-      <li className="Project">
+      <li style={styles.center} className="Project">
         <strong>{this.props.project.title}</strong>: {this.props.project.category} <a href="#" onClick={this.deleteProject.bind(this, this.props.project.id)}>X</a>
       </li>
     );
@@ -21,3 +28,5 @@ ProjectItem.propTypes = {			//adding validation
 
 export default ProjectItem;
 	
+
+  

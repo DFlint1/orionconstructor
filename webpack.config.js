@@ -21,7 +21,8 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           // These are the specific transformations we'll be using.
-          presets: ["latest", "react", "es2015"]
+          presets: ["latest", "react", "es2015"],
+          plugins:['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
           //auth0 requires latest
         }
       }

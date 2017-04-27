@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import request from 'request-promise';
-import moment from 'moment';
+// import request from 'request-promise';
+// import moment from 'moment';
 import uuid from 'uuid';
 
 const styles = {
@@ -61,7 +61,7 @@ class AddProject extends Component {
     });
     return (
 			<div>
-				<h3 className="text-center">Project Manager</h3>
+				<h3 className="text-center">Project Tracker</h3>
 				<form style={styles.center} className="input-group" onSubmit={this.handleSubmit.bind(this)}>
 				<div>
 				<label>Title</label><br />

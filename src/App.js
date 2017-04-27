@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from "react-router";
 import uuid from 'uuid';
 import Projects from './Components/Projects';
 import AddProject from './Components/AddProject';
+import Nav from './Components/Nav';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import './App.css';
@@ -51,24 +53,43 @@ handleAddProject(project){
   render() {
     setTimeout(() => {
       this.setState({title: "Welcome To Orion Project Manager"});
-    }, 2000);
+    }, 2000)
+    const {location} = this.props;
+    const containerStyle = {
+      marginTop: "60px"
+    };
 
 
     return (
-     <div className="App"> 
+     // <div className="App">
+     <div> 
+     <Nav location={location} />
+
+     <div class="container" style={containerStyle}>
+     <div class="row">
+     <div class="col-lg-12">
+     <h1></h1>
+
+     {this.props.children}
         <div>
           <Header title={this.state.title} />
         </div>
           <AddProject addProject={this.handleAddProject.bind(this)}/>
           <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
-        <div>
-          <Footer />
+       
         </div>
-      </div>
+       </div>
+
+          <Footer />
+      
+       </div>
+       </div>
 
     );
   }
 }
+
+<h3 className="text-center">Project Manager</h3>
 // var ReactDOM = require("react-dom");
 // //Grabs the Routes
 // var routes = require("./config/routes");

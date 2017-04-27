@@ -155,7 +155,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-/* background-image: url("orionpic1.jpg");*/
+  background-image: url("%PUBLIC_URL%/orionpic3.png");
   text-align: center;
   color: white;
 }

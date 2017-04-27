@@ -19,7 +19,7 @@ class Projects extends Component {
 		}
 		return (
 		 <div className="Projects">
-		 <h3> Projects in Progress</h3>
+		 <h3 className="text-center"> Projects in Progress</h3>
 		 	{projectItems}
       	 </div>
       	);
@@ -32,4 +32,6 @@ Projects.propTypes = {					//this servers as a validation to make sure it's corr
 
 
 export default Projects;
+	
+
 	
