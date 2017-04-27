@@ -12,9 +12,9 @@ const app = document.getElementById('root'); //app or App?
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={App}>
-		<IndexRoute component={Featured}></IndexRoute>
+		<IndexRoute component={Settings}></IndexRoute>
 		<Route path="archives(/:article)" name="archives" component={Archives}></Route>
-      	<Route path="projects" name="settings" component={Settings}></Route>
+      	<Route path="featured" name="featured" component={Featured}></Route>
       	</Route>
 	</Router>,
   app);
