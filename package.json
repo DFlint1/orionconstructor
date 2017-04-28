@@ -44,15 +44,12 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
-  "engines":{
-    "node":"7.7.1"
-  },
   "scripts": {
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start":"node server.js"
+    "dev": "webpack & node server.js"
   },
   "author": "",
   "license": "ISC"
