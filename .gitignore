@@ -1,6 +1,11 @@
 node_modules
 .DS_Store
 .env
-npm-debut.log
+npm-debug.log
+#misc
+#build
+#production
+#testing
+#dependencies
 
 
