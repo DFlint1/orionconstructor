@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 // import request from 'request-promise';
 // import moment from 'moment';
 import uuid from 'uuid';
+import request from 'request-promise';
+import moment from 'moment';
+
 
 const styles = {
   center: {
@@ -26,8 +29,7 @@ const styles = {
 }
 
 
-
-class AddProject extends Component {
+export default class AddProject extends React.Component {
 	constructor(){
 		super();
 		this.state = {
@@ -87,4 +89,3 @@ AddProject.propTypes = {	//adding validation
   addProject: React.PropTypes.func
 }
 
-export default AddProject;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectItem from './ProjectItem';
 
-class Projects extends Component {
+export default class Projects extends React.Component {
 	deleteProject(id){
 		this.props.onDelete(id);
 	}
@@ -31,7 +31,7 @@ Projects.propTypes = {					//this servers as a validation to make sure it's corr
 }
 
 
-export default Projects;
+
 	
 
 	

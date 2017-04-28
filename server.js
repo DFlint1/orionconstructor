@@ -26,7 +26,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // -------------------------------------------------
 
 // MongoDB Configuration configuration
-mongoose.connect("mongodb://localhost/todos");
+mongoose.connect("mongodb://localhost/projects");
 var db = mongoose.connection;
 
 db.on("error", function(err) {
@@ -41,7 +41,7 @@ db.once("open", function() {
 // -------------------------------------------------
 
 // mongoDB schema
-let todoModel = mongoose.model('todo', {
+let projectModel = mongoose.model('project', {
     todo: String,
     date: {
         type: Date,
@@ -67,19 +67,19 @@ app.use(express.static("/public"));
  // routes that gets all todos in a list 
     // empty is return if nothing is found
 app.get('/get/all', (request, response) => {
-    todoModel.find((error, todos) => {
+    projectModel.find((error, project) => {
     logError(error);
-    response.send(todos);    
+    response.send(projects);    
     })
 })
 //==========================================================================
     // saves a todo
     // :todo is a paramater passed in the url
-app.get('/save/:todo', (request, response) => {
-    let {todo} = request.params
-    new todoModel({todo}).save((error, savedTodo) => {
+app.get('/save/:project', (request, response) => {
+    let {project} = request.params
+    new projectModel({project}).save((error, savedProject) => {
     logError(error);
-    response.send(savedTodo);
+    response.send(savedProject);
     })
 
 })
@@ -90,19 +90,19 @@ app.get('/save/:todo', (request, response) => {
 app.get('/remove/:date', (request, response)=>{
     let {date} = request.params
 
-todoModel.remove({date}, (error, deletedTodo) => {
+projectModel.remove({date}, (error, deletedProject) => {
     logError(error);
-    response.send(deletedTodo);
+    response.send(deletedProject);
     })
 })
 
     // finds a specific todo 
     // updates it a new todo text and completed value  
-app.get('/update/:date/:completed/:todo', (request, response) => {
-    let {date, completed, todo} = request.params
-    todoModel.findOneAndUpdate({date}, { completed, todo }, { new: true }, (error, updatedTodo) => {
+app.get('/update/:date/:completed/:project', (request, response) => {
+    let {date, completed, project} = request.params
+    projectModel.findOneAndUpdate({date}, { completed, project }, { new: true }, (error, updatedProject => {
     logError(error);
-    response.send(updatedTodo);
+    response.send(updatedProject);
     })
 })
 //======================================================

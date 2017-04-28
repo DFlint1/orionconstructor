@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 const styles = {
   center: {
     marginLeft: 'auto',
@@ -7,7 +8,7 @@ const styles = {
   },
 }
 
-class ProjectItem extends Component {
+export default class ProjectItem extends React.Component {
   deleteProject(id){
     this.props.onDelete(id);
   }
@@ -26,7 +27,7 @@ ProjectItem.propTypes = {			//adding validation
   onDelete: React.PropTypes.func
 }
 
-export default ProjectItem;
+
 	
 
   

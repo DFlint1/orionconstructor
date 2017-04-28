@@ -5,7 +5,7 @@ export default class Article extends React.Component {
     const { title } = this.props;
 
     return (
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h4>{title}</h4>
         <p>Before deciding who to hire for your next project by looking at lowest bid and quickest timeframe, ask yourself if you want in done right, or want to spend the next 15 years WISHING it was done right!
 We do it right for you. We want your business, but we won't sacrifice time and money to deliver poor quality. You will be super happy with your home if you call us. New construction, remodel, repairs, or maintenance, we will deliver top rate service.</p>

@@ -6,6 +6,7 @@ import App from './App';  //this has to stay here to render App.js
 import Archives from './pages/Archives'; //placing these in Alphabetical for fun
 import Featured from './pages/Featured';
 import Settings from './pages/Settings';
+// import AddProject from './Components/AddProject';
 
 const app = document.getElementById('root'); //app or App?
 
@@ -17,6 +18,6 @@ ReactDOM.render(
       	<Route path="featured" name="featured" component={Featured}></Route>
       	</Route>
 	</Router>,
-  app);
+  app); 
 
 // import './index.css';
